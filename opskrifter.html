@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>URTEKRAM</title>
+
+	<!-- SEO -->
+	<meta name="author" content="Emma Juhl Jensen">
+	<meta name="description" content="Pasta konkurrence kampange madspild grønomstilling kødfri kødfridage URTEKRAM">
+
+	<!-- viewport skaleres -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- favicon = ikon i faneblad / browser -->
+	<link rel="icon" type="image/x-icon" href="images/icon.png" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+
+	<!-- "Wrapperen" holder sammen på designet. -->
+	<div id="wrap">
+
+		<!-- Emmet tip: nav>ul>li{Menu $}*3 -->
+		<header>
+			<a href="index.html">
+				<div class="logoweb">
+				<img src="images/logo.png" alt="logo">
+				</div>
+				<div class="logomob">
+					<img src="images/logo.png" alt="logo">
+				</div>
+			</a>
+			<input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<nav>
+				<ul>
+					<li><a href="konceptet.html">Koncept</a></li>
+					<li><a href="Opskrifter.html">Opskrifter</a></li>
+					<li><a href="konkurrence.html">Konkurrence</a></li>
+					<li><a href="omos.html">Om os</a></li>
+				</ul>
+			</nav>
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+		</header>
+
+
+
+
+		<!-- indhold -->
+		<main>
+			<section id="opskriftersweb">
+				<section class="opskrifteroverskrift">
+					<article>
+						<h1> Opskrifter </h1>
+					</article>
+				</section>
+
+				<section class="opskrifttekstboks">
+					<article>
+						<p>
+							I andledning af vores fokus på kødfrie dage,
+							har vi har lavet nemme og billige løsninger på pasta retter,
+							der er lige til at overkomme og smager henrivende
+						</p>
+
+					</article>
+				</section>
+
+				<!-- dette er en søgebar, hvor man kan søge på indregienser, hvis man har noget i køleskabet-->
+				<section id="searchbar">
+					<div class="searchbar">
+						<div class="search">
+							<input type="text" class="input" placeholder="Indgredienser">
+							<input type="button" value="SØG" class="close-btn">
+						</div>
+					</div>
+				</section>
+
+				<!--denne side er tilpasset webløsning-->
+				<!--denne side skal førre til en opskrift med svampe-->
+				<section id="rowopskrifter">
+					<div class="rowopskrifter">
+
+						<div class="columnopskrifter">
+							<a href="pastasvamp.html">
+								<img src="images/pastasvamp.png" alt="Pasta med svampe">
+							</a>
+						</div>
+
+						<!--skal føre indtil pasta pesto-->
+						<div class="columnopskrifter">
+							<a href="#">
+								<img src="images/pastapest.png" alt="Nicolas Vahé">
+							</a>
+						</div>
+
+						<!--skal føre indtil pasta i tomat-->
+						<div class="columnopskrifter">
+							<a href="#">
+								<img src="images/pastat.png" alt="By nord">
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<!--dette er teksten til billederne events-->
+
+				<section id="rowopskriftertekst">
+					<div class="rowopskriftertekst">
+						<!--skal føre indtil en opskrift med svampe-->
+						<div class="columnopskriftertekst">
+							<a href="pastasvamp.html">
+								<img src="images/ps.png" alt="pasta med svampe">
+							</a>
+
+							<!--skal føre indtil en opskrift med pesto-->
+						</div>
+						<div class="columnopskriftertekst">
+							<a href="#">
+								<img src="images/pp.png" alt="Pasta pesto">
+							</a>
+						</div>
+
+						<!--skal føre indtil en opskrift med pasta tomat-->
+						<div class="columnopskriftertekst">
+							<a href="#">
+								<img src="images/ptt.png" alt="By nord">
+							</a>
+						</div>
+					</div>
+				</section>
+			</section>
+
+
+
+			<!--Dette er de samme billeder bare til mobilen-->
+			<section id=mobileop>
+			<section id="mobilopskrifter">
+				<article class="opsrifterbilledemobil">
+				</article>
+
+				<section class="opskrifteroverskrift">
+					<article>
+						<h1> Opskrifter </h1>
+					</article>
+				</section>
+
+				<section class="opskriftekstboks">
+					<article>
+						<p>
+							I andledning af vores fokus på kødfrie dage, har vi har lavet nemme og billige løsninger på pasta retter, der er lige til at overkomme og smager henrivende.
+						</p>
+
+					</article>
+				</section>
+				<!--søge felt mobil-->
+				<section id="searchbarmob">
+					<div class="searchbarmob">
+						<div class="searchmob">
+							<input type="text" class="inputmob" placeholder="Indgredienser">
+							<input type="button" value="SØG" class="close-btnmob">
+						</div>
+					</div>
+				</section>
+				<!--søgefelt slutter-->
+
+
+				<!--den mobile enhed opskrifter-->
+				<section id="rowopskriftermob">
+					<div class="rowopskriftermob">
+
+						<!--skal føre indtil pasta med svampe-->
+						<div class="columnopskriftermob">
+							<a href="pastasvamp.html">
+								<img src="images/pastasvamp.png" alt="Pasta med svampe">
+							</a>
+						</div>
+
+						<!--skal føre indtil pasta pesto-->
+						<div class="columnopskriftermob">
+							<a href="#">
+								<img src="images/pastapest.png" alt="Pasta med pesto">
+							</a>
+						</div>
+					</div>
+				</section>
+
+
+				<section id="rowopskriftertekstmob">
+					<div class="rowopskriftertekstmob">
+
+						<!--skal føre indtil Housedoctor events-->
+						<div class="columnopskriftertekstmob">
+							<a href="kalender.html">
+								<img src="images/ps.png" alt="Housedoctor tekst">
+							</a>
+						</div>
+
+						<!--skal føre indtil Nicolas vahe events-->
+						<div class="columnopskriftertekstmob">
+							<a href="#">
+								<img src="images/pp.png" alt="Nicolas Vahé tekst">
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="rowopskriftertekstmob1">
+					<div class="rowopskriftertekstmob">
+
+						<!--skal føre indtil byNORD events-->
+						<div class="columnopskriftermob">
+							<a href="#">
+								<img src="images/pastat.png" alt="Pasta med tomat">
+							</a>
+						</div>
+
+						<!--skal føre indtil Monograph events-->
+						<div class="columnopskriftermob">
+							<a href="#">
+								<img src="images/f.png" alt="hjælp">
+							</a>
+						</div>
+					</div>
+				</section>
+
+				<section id="rowopskriftermob2">
+					<div class="rowopskriftertekstmob">
+
+						<!--skal føre indtil byNORD events-->
+						<div class="columnopskriftertekstmob">
+							<a href="#">
+								<img src="images/ptt.png" alt="By nord tekst">
+							</a>
+						</div>
+
+
+						<!--skal føre indtil Monograph events-->
+						<div class="columnopskriftertekstmob">
+							<a href="#">
+								<img src="images/f.png" alt="Monograph tekst">
+							</a>
+						</div>
+					</div>
+				</section>
+		</section>
+		</section>
+	</main>
+
+		<!-- typisk kontaktinformationer -->
+		<footer>
+
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+
+						<div class="footer-col">
+							<h4>Find os</h4>
+							<ul>
+								<li><a href="#"> Midsona Danmark A/S</a></li>
+								<li><a href="#"> Klostermarken 20</a></li>
+								<li><a href="#"> 9550 Mariager</a></li>
+								<li><a href="#">Midsona Danmark A/S</a></li>
+								<li><a href="#">Blomstervej 8</a></li>
+								<li><a href="#">8381 Tilst</a></li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h4>Kundeservice</h4>
+							<ul>
+								<li><a href="#">Telefon: +45 9854 2288</a></li>
+								<li><a href="#">Fax: +45 9854 2333</a></li>
+								<li><a href="#">Email: info@urtekram.dk</a></li>
+							</ul>
+						</div>
+						<div class="footer-col">
+							<h4>Følg os</h4>
+							<!---socialemedier links-->
+							<div class="social-links">
+								<a href="https://www.facebook.com/urtekram/"><i class="fab fa-facebook-f"></i></a>
+								<a href="https://www.instagram.com/urtekram/?hl=sv/"><i class="fab fa-instagram"></i></a>
+								<a href="https://www.linkedin.com/company/urtekram-as/"><i class="fab fa-linkedin-in"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			&copy; Urtekram December 2021, Emma Juhl Jensen.
+		</footer>
+
+	</div><!-- /wrap -->
+</body>
+
+</html>

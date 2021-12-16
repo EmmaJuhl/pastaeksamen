@@ -1,0 +1,1327 @@
+/**
+ * fil: css/style.css
+ **/
+/* Reset: Meyer Style */
+/* fjerner default browser styles */
+@import 'reset.css';
+@import url("https://use.typekit.net/qbr3cdq.css");
+
+/*info om fonten*/
+/*font-family: gill-sans-nova-condensed, sans-serif;
+font-weight: 400;
+font-style: normal;*/
+/* Farve- og fontvariabler */
+:root {
+  /* farver */
+  /*Header farven*/
+  --white1: #E5DFDF;
+  /*Tema farven på siden*/
+  --blue: #6BA8A9;
+  --white2: #357376;
+  --white3: #ae9e79;
+  --green: #357376;
+  --background: #1D4D4F;
+  /* fonte */
+  --overskrift: 'gill-sans-nova-condensed', sans-serif, serif;
+  --broedtekst: 'gill-sans-nova-condensed', sans-serif, serif;
+}
+
+#wrap {}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+}
+
+/* Her bruges en variabel: --blue */
+body {
+  margin: 0;
+  font-family: var(--broedtekst);
+  background: var(--blue);
+}
+
+/* Navigation*/
+header {
+  background: var(--white1);
+  text-align: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/*dette er burger baren*/
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: var(--green);
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+/*dropdown styling*/
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--white1);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+/*dette er nav style*/
+nav a {
+  color: var(--green);
+  text-decoration: none;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+/*dette er for at der kommer men lille markering*/
+nav a:hover {
+  color: grey;
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* Forside Video */
+video {
+  width: 100%;
+  height: auto;
+}
+
+#forsidevideo {
+  position: relative;
+  height: 50%;
+}
+
+/* Forside  */
+#forsidetekstweb {
+  background-color: var(--bLue);
+  line-height: 3;
+}
+
+/*styre linje afstand på forsiden på web løsningen*/
+.forsidetekstweb p {
+  line-height: 3;
+}
+
+/*forsidebilleder webløsning-- 3 på stribe*/
+#teasertekstweb {
+  text-align: center;
+  background-color: var(--green);
+}
+
+.rowteaserweb {
+  display: flex;
+  text-align: center;
+}
+
+.columnteaserweb {
+  flex: 33.33%;
+  padding: 0;
+}
+
+#teasertekstweb img {
+  width: 25%;
+  margin-top: 5%;
+}
+
+/*Teaser tekst til webløsning */
+#forsidebillederweb {
+  text-align: center;
+  background-color: var(--green);
+}
+
+.rowforsideweb {
+  display: flex;
+  text-align: center;
+}
+
+.columnforsideweb {
+  flex: 33.33%;
+  padding: 0;
+}
+
+#forsidebillederweb img {
+  width: 25%;
+  margin-top: 15%;
+}
+
+/*selve tekstløsningen til mobilteksten*/
+#forsidetekstmobil p {
+  line-height: 3;
+  color: var(--white1);
+  text-align: center;
+  margin: 17px;
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+
+/*Dette er for at kunne styre, den mobileløsnings tekst, så den kan få et andet design*/
+/*overskriftstekst til mobil løsning*/
+#forsidetekstmobil h3 {
+  line-height: 2px;
+  color: var(--white1);
+  text-align: center;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/*dette er billederne til den mobile enhed forsiden*/
+#forsidebilledermobil {
+  text-align: center;
+  background-color: var(--green);
+}
+
+.rowforside {
+  display: flex;
+  text-align: center;
+}
+
+.columnforside {
+  flex: 33.33%;
+  padding: 0;
+}
+
+#forsidebilledermobil img {
+  width: 50%;
+  margin-top: 15%;
+}
+
+/*Dette er teaserteksten der er under billederne*/
+#teasertekstenmob {
+  text-align: center;
+  background-color: var(--green);
+}
+
+.rowteasermob {
+  display: flex;
+  text-align: center;
+}
+
+.columnteasermob {
+  flex: 33.33%;
+  padding: 0;
+}
+
+#teasertekstenmob img {
+  width: 100%
+}
+
+/*overskrift til forsideteksten dette fungere til både weblødning og mobil løsning*/
+#forsidetekstweb h3 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'gill-sans-nova-condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1)
+}
+
+.forsidetekstweb {
+  text-align: center;
+  font-style: italic;
+  line-height: 2;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/*FORSIDE SLUTTER*/
+/*Opskrifter starter*/
+/*teksten man først møder på siden*/
+.opskrifteroverskrift h1 {
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.opskrifttekstboks p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin-bottom: 5%;
+}
+
+/*søge felt til indgredienser web*/
+#searchbar {
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.search {
+  position: sticky;
+  padding: 20px 50px;
+  margin-top: 5%;
+}
+
+.searchbar {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Dette er styling af selve inputtet*/
+.input {
+  width: 400px;
+  border: 3px solid var(--white1);
+  background: transparent;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+}
+
+/*for google */
+::-webkit-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+/*for firefox*/
+::-moz-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+/*for safari*/
+::-ms-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+.close-btn {
+  position: absolute;
+  top: 21px;
+  right: 50px;
+  cursor: pointer;
+  width: 120px;
+  height: 55px;
+  background: var(--green);
+  color: var(--blue);
+  border-radius: 50px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*KOM TILBAGE HER TIL!!!!!*/
+/*søgefelt for mobil*/
+#searchbarmob {
+  display: flex;
+}
+
+.searchmob {
+  padding: 10px 50px;
+  margin: 5%;
+}
+
+.searchbarmob {
+  text-align: center;
+}
+
+/*Dette er styling af selve inputtet*/
+.inputmob {
+  border: 3px solid var(--white1);
+  background: transparent;
+  padding: 15px 30px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+}
+
+/*for google */
+::-webkit-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+/*for firefox*/
+::-moz-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+/*for safari*/
+::-ms-input-placeholder {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: gill-sans-nova-condensed;
+}
+
+.close-btnmob {
+  position: absolute;
+  top: 21px;
+  right: 50px;
+  cursor: pointer;
+  width: 120px;
+  height: 55px;
+  background: var(--green);
+  color: var(--blue);
+  border-radius: 50px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*Dette er teksten til den mobileløsning*/
+.opskriftekstboks p {
+  text-align: center;
+  line-height: 2;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 30px;
+  margin: 10%;
+}
+
+.opskrifteroverskrift h1 {
+  font-size: 50px;
+  padding-top: 25px;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: var(--overskrift)
+}
+
+/*MOBILFUNKTION*/
+.rowopskriftermob {
+  display: flex;
+}
+
+.columnopskriftermob {
+  flex: 33.33%;
+  margin-bottom: 0px;
+}
+
+.rowopskriftermob img {
+  margin-bottom: -10px;
+  width: 100%;
+}
+
+.rowopskriftertekstmob {
+  display: flex;
+}
+
+.columnopskriftertekstmob {
+  flex: 33.33%;
+}
+
+.rowopskriftertekstmob img {
+  margin-top: -3px;
+  width: 100%;
+}
+
+/*MOBILFUNKTION SLUTTER*/
+/* web med samme funktion bare bredere da det ser bedere ud på skærmen*/
+.rowopskrifter {
+  display: flex;
+}
+
+.columnopskrifter {
+  flex: 33.33%;
+  margin-bottom: 0px;
+}
+
+.rowopskrifter img {
+  margin-bottom: -10px;
+  width: 100%;
+}
+
+.rowopskriftertekst {
+  display: flex;
+}
+
+.columnopskriftertekst {
+  flex: 33.33%;
+}
+
+.rowopskriftertekst img {
+  margin-top: 0px;
+  width: 100%;
+}
+
+/*OPSKRIFTSIDEN SLUTTER*/
+/*------------------------------------------------------*/
+/*PASTA MED SVAMPE STARTER*/
+/*WEB FUNKTION*/
+.retoverskrift h1 {
+  font-size: 50px;
+  padding-top: 25px;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: var(--overskrift);
+  color: var(--white1);
+}
+
+.pastaretten img {
+  float: right;
+  display: flex;
+  margin-right: 5%;
+}
+
+.columnretinfo p {
+  display: flex;
+  text-align: center;
+  line-height: 2;
+  margin-top: 5%;
+  padding-bottom: 45px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.pastaretten p, img {
+  margin: auto;
+}
+
+.rowartikel {
+  display: flex;
+}
+
+.columnartikel p {
+  column-count: 2;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 45px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 27px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+/* Clear floats after the columns for at få kollonerne til at floatte rigtig  */
+.rowartikel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*overskrift til indgredienser*/
+.indgredienser h1 {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 25px;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: var(--overskrift);
+  color: var(--white1);
+}
+
+/*indgredienser og fremgangsmetode plus boksen rundt om dette er web løsning*/
+.columnindgri p {
+  column-count: 2;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 45px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 27px;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  background-color: var(--green);
+  padding: 5%;
+}
+
+/*MOBIL VERSION*/
+.pastarettenmob img {
+  text-align: center;
+  width: 100%;
+}
+
+.artikelmob h1 {
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 0px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 40px;
+  margin: 5px;
+}
+
+/*infotekst til den mobileløsning*/
+.infomob p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'gill-sans-nova-condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+}
+
+/*Ekstra billede til den mobile løsning da det gav god mening og så pænt ud*/
+.billedeingr img {
+  max-width: 375px;
+  text-align: center;
+}
+
+/*opdeling for at få det til at stå rigtigt*/
+.indgredienser p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+}
+
+.fremgangsmodemob p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+  background-color: var(--green);
+}
+
+/*-------------------------------------------------------------*/
+/*konkurrence side STARTER*/
+/*MOBIL billede*/
+.bilkonkurrence {
+  width: 100%;
+  text-align: center;
+}
+
+.containerweb {
+  background-color: var(--blue);
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.containerweb h2 {
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 0px;
+  color: var(--blue);
+  font-family: var(--overskrift);
+  font-size: 40px;
+  margin: 5px;
+  margin-top: 0px;
+}
+
+.containerweb p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--blue);
+  line-height: normal;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Arial;
+}
+
+/*dette er teksten til */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.Name {
+  color: var(--blue)
+}
+
+/*dette er margin for de henholdvis email og navn kollone*/
+input[type=checkbox] {
+  margin-top: 12px;
+}
+
+/*dette er tilmeld knappen*/
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+/*-----------------------------------------------------------*/
+/*konceptside starter*/
+.konoverskrift h1 {
+  font-size: 100px;
+  padding-top: 25px;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: var(--overskrift);
+  color: var(--white1);
+
+}
+
+.konceptweb img {
+  float: right;
+  display: flex;
+  margin: 0px;
+}
+
+/*for at lave boksen rundt om teksten*/
+#kon{
+  background-color: var(--green);
+  margin: 5%;
+}
+
+/*styling af overskrift*/
+.kon h1 {
+  font-size: 100px;
+  padding-top: 25px;
+  text-align: center;
+  padding-bottom: 1px;
+  font-family: var(--overskrift);
+  color: var(--white1);
+
+}
+
+/*styling af tekst*/
+.kon p {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'gill-sans-nova-condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  line-height: normal;
+  padding: 5%;
+  column-count: 2;
+}
+
+.konmob h1 {
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 0px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 40px;
+  margin: 20px;
+}
+
+.konmob a {
+  text-decoration: underline;
+  text-decoration-color: var(--white1);
+}
+
+.kod p {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'gill-sans-nova-condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  line-height: normal;
+
+}
+.kod a {
+  text-decoration: underline;
+  text-decoration-color: var(--white1);
+
+}
+
+
+
+.infomob p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'gill-sans-nova-condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+}
+
+.help p {
+  text-align: center;
+  padding-top: 10px;
+  font-family: var(--overskrift);
+  font-size: 40px;
+  color: var(--white1)
+}
+
+.rowartikel {
+  display: flex;
+}
+
+.columnartikel p {
+  column-count: 2;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 45px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 27px;
+  margin: 5%;
+}
+
+/* Clear floats after the columns for at få kollonerne til at floatte rigtig  */
+/*når artikellen er færdigskrevet kom tilbage her til*/
+.rowartikel:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+
+/*-----*/
+/*MOBIL VERSION bruges både ttil om os side og koncept*/
+.pastarettenmob img {
+  text-align: center;
+  width: 100%;
+}
+/*MOBIL VERSION bruges både ttil om os side og koncept*/
+.helpmob p {
+  text-align: center;
+  padding-top: 5px;
+  font-family: var(--overskrift);
+  font-size: 25px;
+  color: var(--white1)
+}
+/*MOBIL VERSION bruges både ttil om os side og koncept*/
+.artikelmob2 h1 {
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 0px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 40px;
+}
+
+/*infotekst til den mobileløsning løsning til både koncept og om os siden */
+.infomob p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+}
+
+/*Ekstra billede til den mobile løsning da det gav god mening og så pænt ud*/
+.billedeingr img {
+  max-width: 375px;
+  text-align: center;
+}
+
+/*opdeling for at få det til at stå rigtigt*/
+.indgredienser p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: gill-sans-nova-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+}
+/*MOBIL VERSION bruges både ttil om os side og koncept*/
+.fremgangsmodemob p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: var(--overskrift);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+  background-color: var(--green);
+}
+
+/*-----------------------------------------------------*/
+/*OM OS siden*/
+
+.columnom p {
+  column-count: 2;
+  text-align: center;
+  line-height: 2;
+  padding-bottom: 45px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 27px;
+  margin-bottom: 15%;
+}
+
+/*dette er teksten til om os siden*/
+.green p{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: var(--overskrift);
+  font-weight: 400;
+  font-style: normal;
+  color: var(--white1);
+  margin: 8%;
+  line-height: normal;
+}
+
+/*dette er overskriften underoverskriften til om os siden  */
+.green h1{
+  text-align: center;
+  padding-bottom: 0px;
+  color: var(--white1);
+  font-family: var(--overskrift);
+  font-size: 40px;
+}
+
+/*OM os side slutter*/
+
+
+
+/* Wrap */
+#wrap {
+  min-height: 100vh;
+}
+
+div.galleritekstboks img {
+  width: 100%;
+  height: auto;
+}
+
+/* footer alt om footeren */
+.container, .container ul, .footer-col, .footer-col h4::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer ul {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: var(--blue);
+  padding: 70px 0;
+}
+
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
+}
+
+/*footer overskriftstekst.*/
+.footer-col h4 {
+  font-size: 18px;
+  color: var(--white1);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col h4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: var(--white1);
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+  text-align: center;
+}
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--white1);
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/*animation på footer- teksten flytter sig og bliver markeret hvide.*/
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: var(--white1);
+  background-color: #4f83d1;
+}
+
+/* MOBILE FIRST ØVELSER */
+/* 1. Mobile enheder (begynd her) */
+@media only screen and (max-width: 375px) {
+
+  /*FORSIDEN*/
+  /*Dette er de styles der ikke vises på den mobileløsning.*/
+  #forsidetekstweb {
+    display: none;
+  }
+
+  /*de tre små billeder på række*/
+  #forsidebillederweb {
+    display: none
+  }
+
+  /*de tre teasere på række*/
+  #teasertekstweb {
+    display: none;
+  }
+
+  /*FORSIDEN SLUTTER*/
+  #opskriftersweb {
+    display: none;
+  }
+
+  #rowopskrifter {
+    display: none;
+  }
+
+  /*dette er opskriftsiden man kommer ind på inden opskrifterne*/
+  #rowopskrifter {
+    display: none;
+  }
+
+  /*OPSKRIFTSIDEN*/
+  #pastaretten {
+    display: none;
+  }
+
+  #info {
+    display: none;
+  }
+
+  /*PASTARETTEN*/
+  #indgredienser {
+    display: none;
+  }
+
+  #konceptweb {
+    display: none;
+  }
+
+  #kon{
+    display: none;
+  }
+
+  /*footer for at den kan tilpasse sig til den lille skærm*/
+  .footer-col {
+    width: 60%;
+    margin-bottom: 30px;
+    padding-left: 40px;
+  }
+}
+
+/* 2. Tablets mv. (fortsæt her) */
+@media only screen and (max-width: 779px) {
+
+  /*forside*/
+  .logoweb {
+    display: none;
+  }
+
+  #forsidebillederweb {
+    display: none
+  }
+
+  #forsidebox1 h3 {
+    font-size: 30px;
+  }
+
+  #forsidetekstweb{
+    display: none;
+  }
+
+  /*konkurrence side starter*/
+  #webbil {
+    display: none;
+  }
+
+#mobileop{
+  display: none;
+}
+
+#teasertekstweb{
+  display: none;
+}
+
+}
+
+/* 3. Stor skærm (slut her) */
+@media only screen and (min-width: 780px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logoweb {
+    grid-column: 2 / 3;
+  }
+
+  .logomob {
+    display: none;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  /*Dette er for at der i min footer er en streg der markere hvor man vil trykke på menu punkterne*/
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--green);
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 400ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  /* forside */
+  /*dette er forside teksten, her kan jeg lave bokse eller redigere i tekstens design*/
+  .rowforsidetekstweb {
+    background-color: var(--white1);
+    padding-left: 300px;
+    padding-right: 300px;
+    line-height: 3;
+  }
+
+  /*Dette er de ting der ikke visses på forsiden til web skærmen.*/
+  #forsidebilledermobil {
+    display: none
+  }
+
+  #forsidetekstmobil {
+    display: none;
+  }
+
+  #teasertekstenmob {
+    display: none;
+  }
+
+  /*forside billeder verden og spaghetti, class er lavet for at kunne få den til at felxe ved siden af hianden*/
+  /*webløsning med for side teksten*/
+  #forsidetekstweb p {
+    font-size: 30px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    color: var(--white1);
+    font-family: var(--overskrift);
+    margin-bottom: 5%;
+  }
+
+  .column1forsidetekst p {
+    column-count: 2;
+  }
+
+  /* Clear floats after the columns */
+  .rowforsidetekstweb:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*forside slutter*/
+  /*opskrifter starter*/
+  #mobilopskrifter {
+    display: none;
+  }
+
+  #rowopskriftermob {
+    display: none;
+  }
+
+  #rowopskriftertekstmob {
+    display: none;
+  }
+
+  #rowopskriftermob1 {
+    display: none;
+  }
+
+  #rowopskriftermob2 {
+    display: none;
+  }
+
+  /*Pastaopskrift side*/
+  #pastarettenmob {
+    display: none;
+  }
+
+  #mobbil {
+    display: none;
+  }
+
+  #konceptmob {
+    display: none;
+  }
+}
+
+/*Studio Home*/
+/* studiohome artikel */
