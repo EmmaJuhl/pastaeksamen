@@ -1,0 +1,2 @@
+# pastaeksamen
+Dette er eksamensprojekt
